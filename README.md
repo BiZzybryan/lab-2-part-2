@@ -116,7 +116,7 @@ Copy and paste the output below, but not the whole thing!  Just copy up to the p
 10. That's great, but what if I want to save the file?  What flag/option and option argument would I use to download the page to a file called google.html?  Run it to download the URL www.google.com.
 
 Write the command you used below.  Also copy and paste the output below.
-----------
+---------- -o
 
 
 
@@ -124,7 +124,7 @@ Write the command you used below.  Also copy and paste the output below.
 11. Now let's download the lab file for this homework.  First, figure out what directory you're in.
 
 Write the command you used to determine your directory.  Also, copy and paste the output below.
-----------
+---------- pwd
 
 
 
@@ -132,7 +132,11 @@ Write the command you used to determine your directory.  Also, copy and paste th
 12. If you're not in your home directory, change to it (use the shortcut).
 
 Write the command that you used to change to your home directory.  If you were already in your home directory, write the command that you *would* have used to change to it!
-----------
+----------bryan.pierrelouis02$ ~/
+-bash: /Users/bryan.pierrelouis02/: is a directory
+V217-M14:~ bryan.pierrelouis02$ pwd
+/Users/bryan.pierrelouis02
+V217-M14:~ bryan.pierrelouis02$ 
 
 
 
@@ -148,7 +152,7 @@ REMEMBER to use the -o flag, and follow it with a .zip extension!
 Use ls to verify that it downloaded.
 
 Write down the command that you used to download the file below.  Additionally, write the output of the command below.
-----------
+----------/Users/bryan.pierrelouis02/Downloads/mtec1002-lab-02.zip 
 
 
 
@@ -164,7 +168,7 @@ Write down the command that you used to uncompress the file.
 15. Change to the directory that was just created.  List the contents (of the directory that was extracted from the labs .zip file). 
 
 Copy and paste the output below.
-----------
+---------- I dont remember 
 
 
 
@@ -175,7 +179,9 @@ We're going to mess around with archiving and compressing files.  We'll make a d
 16. Go back up to your home directory.  Create a directory called stuff.  List the contents of your home directory to prove that the directory was created.
 
 Copy and paste the output below.
-----------
+---------- mkdir stuff
+mkdir: stuff: Permission denied
+V217-M14:applications bryan.pierrelouis02$ 
 
 
 
@@ -187,7 +193,9 @@ $ echo "hi" > hello.txt
 List the files in the directory you're currently in (which should be stuff).  
 
 Copy and paste the output below.
-----------
+---------- echo "hi" > hello.txt
+-bash: hello.txt: Permission denied
+V217-M14:applications bryan.pierrelouis02$ 
 
 
 
@@ -199,7 +207,9 @@ $ tar -cvf stuff.tar stuff
 List the files in the directory you're currently in (which should be home).  
 
 Copy and paste the output below.
-----------
+----------tar -cvf stuff.tar stuff
+tar: Failed to open 'stuff.tar'
+V217-M14:/ bryan.pierrelouis02$ 
 
 
 
@@ -209,7 +219,9 @@ Copy and paste the output below.
 $ tar -cvf stuff.tar stuff
 
 Copy and paste the output below.
-----------
+----------tar -cvf stuff.tar stuff
+tar: Failed to open 'stuff.tar'
+V217-M14:/ bryan.pierrelouis02$ 
 
 
 
@@ -218,8 +230,7 @@ Copy and paste the output below.
 
 Copy and paste the output below. (It should contain stuff.tar)
 ----------
-
-
+V217-M14:~ bryan.pierrelouis02$ stuff.tar
 
 ==========
 21. Now compress it!  Type:
@@ -228,6 +239,9 @@ gzip stuff.tar
 
 List your files again.... you should have a new file with a .gz extension.  Copy and paste the output of your this below.
 ----------
+~ bryan.pierrelouis02$ gzip stuff.tar
+gzip: can't stat: stuff.tar (stuff.tar): No such file or directory
+V217-M14:~ bryan.pierrelouis02$ 
 
 
 
